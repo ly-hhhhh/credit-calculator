@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>懶人學分計算網站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>✨For those who are lazy✨
+  </h1>
+  <p style="color: #666; margin-bottom: 20px;">Made by chick🐣</p>
+
+  <div class="selector-group">
+    <select id="mainSelect" onchange="updateSecond()">
+      <option value="">請選擇類別</option>
+      <option value="general">通識課程</option>
+      <option value="major">專業課程</option>
+    </select>
+
+    <select id="subSelect" onchange="updateCourse()">
+      <option value="">請選擇領域</option>
+    </select>
+
+    <select id="courseSelect">
+      <option value="">請選擇課程</option>
+    </select>
+  </div>
+
+  <div class="button-group">
+    <button onclick="addCourse()" class="btn-add">加入課程</button>
+    <button onclick="addCustomCourse()" class="btn-custom">＋自由新增</button>
+  </div>
+
+  <hr>
+
+  <h2>📚 已修課程清單</h2>
+  <ul id="list"></ul>
+
+  <div class="summary">
+    <div class="stat-box">
+      <span class="label">總學分</span>
+      <span id="total" class="value">0</span>
+    </div>
+    <div class="stat-box">
+      <span class="label">畢業還差</span>
+      <span id="remaining" class="value">128</span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
