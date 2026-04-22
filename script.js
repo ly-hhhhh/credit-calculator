@@ -62,15 +62,16 @@ const data = {
       { name: "劇場管理", credit: 3 },
       { name: "戲劇教育實作", credit: 1 },
       { name: "口述歷史劇場", credit: 2 },
-      { name: "劇本導讀", credit: 3 },
-      { name: "教習劇場TiE", credit: 2 },
-      { name: "戲劇製作演出", credit: 2 },
-      { name: "戲劇製作演出", credit: 2 },
+      { name: "劇本導讀（一）", credit: 3 },
+      { name: "劇本導讀（二）", credit: 3 },
+      { name: "教習劇場TiE（一）", credit: 2 },
+      { name: "戲劇製作演出（一）", credit: 2 },
+      { name: "戲劇製作演出（二）", credit: 2 },
       { name: "兒童青少年名劇選讀", credit: 2 },
-      { name: "西洋戲劇及劇場史", credit: 3 }
+      { name: "西洋戲劇及劇場史（二）", credit: 3 }
     ],
     "系選修": [
-      { name: "表演", credit: 2 },
+      { name: "表演（二）", credit: 2 },
       { name: "創造性舞蹈", credit: 2 },
       { name: "音樂與舞蹈", credit: 2 },
       { name: "說故事劇場", credit: 2 },
@@ -79,12 +80,12 @@ const data = {
       { name: "亞洲現當代劇場", credit: 2 },
       { name: "劇場與永續實務", credit: 2 },
       { name: "台灣現代戲劇史", credit: 3 },
-      { name: "創造性戲劇", credit: 4 },
-      { name: "教育戲劇DIE", credit: 4 },
+      { name: "創造性戲劇（二）", credit: 4 },
+      { name: "教育戲劇DIE（二）", credit: 4 },
       { name: "臺灣的戲曲傳統與創新", credit: 2 },
-      { name: "畢業專題實作-戲劇教育", credit: 4 },
-      { name: "畢業專題實作-應用劇場", credit: 4 },
-      { name: "畢業專題實作-劇場展演", credit: 4 }
+      { name: "畢業專題實作（二）-戲劇教育", credit: 4 },
+      { name: "畢業專題實作（二）-應用劇場", credit: 4 },
+      { name: "畢業專題實作（二）-劇場展演", credit: 4 }
     ]
   }
 };
