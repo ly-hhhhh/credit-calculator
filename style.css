@@ -1,64 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&display=swap');
-
 body {
-  font-family: "Noto Serif TC", serif;
-  background: #f0f2f5;
+  font-family: "Songti TC", "Noto Serif TC", "PMingLiU", "MingLiU", serif;
+  background-color: #f8fafc;
+  color: #1e293b;
   display: flex;
   justify-content: center;
   padding: 20px;
+  line-height: 1.6;
 }
 
 .container {
+  max-width: 600px;
   width: 100%;
-  max-width: 650px;
   background: white;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-h1 { 
-  text-align: center; 
-  font-family: "Times New Roman", "Noto Serif TC", serif; 
-  font-size: 28px;
-  margin-bottom: 5px;
+h1 { text-align: center; margin-bottom: 5px; font-weight: 900; }
+.subtitle { text-align: center; color: #64748b; margin-bottom: 30px; }
+
+.selector-group select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
-.selector-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
-select { padding: 12px; border-radius: 10px; border: 1px solid #ddd; font-family: "Noto Serif TC", serif; }
+/* 胖胖按鈕 */
+.action-bar {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
 
-.button-group { display: flex; gap: 10px; }
-button { flex: 1; padding: 12px; border-radius: 10px; border: none; font-weight: bold; cursor: pointer; font-family: "Noto Serif TC", serif; }
-.btn-add { background: #4f46e5; color: white; }
-.btn-custom { background: #10b981; color: white; }
+.action-bar button {
+  flex: 1;
+  padding: 18px 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: inherit;
+}
 
-ul { padding: 0; list-style: none; }
-li { background: #f9fafb; padding: 10px 15px; margin-bottom: 8px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
-li button { background: #fee2e2; color: #ef4444; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+.btn-add { background-color: #6366f1; }
+.btn-add:hover { background-color: #4f46e5; transform: translateY(-2px); }
 
-/* 儀表板樣式 */
+.btn-custom { background-color: #10b981; }
+.btn-custom:hover { background-color: #059669; transform: translateY(-2px); }
+
+/* 清單樣式 */
+.semester-block {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.semester-title {
+  font-weight: bold;
+  color: #475569;
+  margin-bottom: 10px;
+  border-left: 4px solid #6366f1;
+  padding-left: 10px;
+}
+
+ul { list-style: none; padding: 0; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .summary-dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .stat-card {
-  background: #f8fafc;
   padding: 15px;
-  border-radius: 15px;
-  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 12px;
   text-align: center;
+  border: 1px solid #e2e8f0;
 }
-
-.card-title { font-size: 13px; color: #64748b; margin-bottom: 5px; }
-.card-main { font-size: 20px; font-weight: bold; font-family: "Times New Roman", serif; }
-.card-sub { font-size: 12px; margin-top: 5px; color: #94a3b8; }
 
 .stat-card.total {
   grid-column: span 2;
-  background: #4f46e5;
+  background: #1e293b;
   color: white;
 }
-.stat-card.total .card-title, .stat-card.total .card-sub { color: #e0e7ff; }
+
+.card-title { font-size: 0.85rem; color: #64748b; margin-bottom: 5px; }
+.total .card-title { color: #94a3b8; }
+.card-main { font-size: 1.4rem; font-weight: bold; }
+.card-sub { font-size: 0.75rem; margin-top: 5px; }
