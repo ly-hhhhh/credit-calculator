@@ -141,5 +141,5 @@ function render() {
   gc.style.color = genDomains.size >= 3 ? "#10b981" : "#ef4444";
 }
 
-function save() { localStorage.setItem("nua_credit_final_v8", JSON.stringify(selected)); }
-function load() { const d = localStorage.getItem("nua_credit_final_v8"); if(d) selected = JSON.parse(d); }
+function save() { localStorage.setItem("nua_credit_final_v10", JSON.stringify(selected)); }
+function load() { const d = localStorage.getItem("nua_credit_final_v10"); if(d) selected = JSON.parse(d); }
