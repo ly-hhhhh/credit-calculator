@@ -1,8 +1,7 @@
-/* 引入 Google Fonts 思源宋體 (繁體中文) */
+/* 引入 Google Fonts 思源宋體 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap');
 
 body {
-  /* 優先使用思源宋體，確保平板與手機顯示正常 */
   font-family: 'Noto Serif TC', "Songti TC", "PMingLiU", "MingLiU", serif;
   background-color: #f8fafc;
   color: #1e293b;
@@ -21,17 +20,8 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-h1 { 
-  text-align: center; 
-  margin-bottom: 5px; 
-  font-weight: 900; 
-}
-
-.subtitle { 
-  text-align: center; 
-  color: #64748b; 
-  margin-bottom: 30px; 
-}
+h1 { text-align: center; margin-bottom: 5px; font-weight: 900; }
+.subtitle { text-align: center; color: #64748b; margin-bottom: 30px; }
 
 .selector-group select {
   width: 100%;
@@ -40,10 +30,10 @@ h1 {
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   font-size: 1rem;
-  font-family: inherit; /* 確保選單也用宋體 */
+  font-family: inherit;
 }
 
-/* 胖胖按鈕區塊 */
+/* 胖胖按鈕 */
 .action-bar {
   display: flex;
   gap: 15px;
@@ -61,7 +51,7 @@ h1 {
   transition: all 0.3s ease;
   color: white;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  font-family: inherit; /* 確保按鈕也用宋體 */
+  font-family: inherit;
 }
 
 .btn-add { background-color: #6366f1; }
@@ -70,7 +60,7 @@ h1 {
 .btn-custom { background-color: #10b981; }
 .btn-custom:hover { background-color: #059669; transform: translateY(-2px); }
 
-/* 清單與卡片設計 */
+/* 清單樣式 */
 .semester-block {
   background: #f1f5f9;
   padding: 15px;
@@ -132,3 +122,21 @@ li {
 .total .card-title { color: #94a3b8; }
 .card-main { font-size: 1.4rem; font-weight: bold; }
 .card-sub { font-size: 0.75rem; margin-top: 5px; }
+
+/* 頁腳 */
+.footer-note {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.footer-note a {
+  color: #6366f1;
+  text-decoration: none;
+  border-bottom: 1px dashed #6366f1;
+  transition: all 0.3s;
+  margin: 0 4px;
+}
