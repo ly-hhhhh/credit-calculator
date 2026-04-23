@@ -9,9 +9,8 @@
 <body>
 
 <div class="container">
-  <h1>✨開始計算✨
-  </h1>
-  <p style="color: #666; margin-bottom: 20px;">目標：不要延畢</p>
+  <h1>✨ 請選課程 ✨</h1>
+  <p style="color: #666; margin-bottom: 20px; text-align: center;">目標：不要延畢</p>
 
   <div class="selector-group">
     <select id="mainSelect" onchange="updateSecond()">
@@ -39,15 +38,11 @@
   <h2>📚 已修課程清單</h2>
   <ul id="list"></ul>
 
-  <div class="summary">
-    <div class="stat-box">
-      <span class="label">總學分</span>
-      <span id="total" class="value">0</span>
-    </div>
-    <div class="stat-box">
-      <span class="label">畢業還差</span>
-      <span id="remaining" class="value">128</span>
-    </div>
+  <div class="summary-grid">
+    <div class="stat-item"><span>通識</span><b id="score-gen">0</b></div>
+    <div class="stat-item"><span>必修</span><b id="score-req">0</b></div>
+    <div class="stat-item"><span>選修</span><b id="score-ele">0</b></div>
+    <div class="stat-item total"><span>總分</span><b id="total">0</b></div>
   </div>
 </div>
 
