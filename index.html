@@ -3,63 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>懶人學分計算網站</title>
+  <title>南戲學分計算</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>✨ 請選課程 ✨</h1>
-  <p style="color: #666; margin-bottom: 20px; text-align: center;">目標：不要延畢</p>
+  <h1>✨ 請開始你的選課 ✨</h1>
+  <p class="subtitle">基於南大戲劇113課程規劃</p>
 
   <div class="selector-group">
-    <select id="mainSelect" onchange="updateSecond()">
-      <option value="">請選擇類別</option>
-      <option value="general">通識課程 (門檻 28)</option>
-      <option value="major">專業課程 (門檻 80)</option>
+    <select id="semesterSelect" onchange="updateMain()">
+      <option value="">1. 請選擇學期</option>
+      <option value="1-1">大一上</option>
+      <option value="1-2">大一下</option>
+      <option value="2-1">大二上</option>
+      <option value="2-2">大二下</option>
+      <option value="3-1">大三上</option>
+      <option value="3-2">大三下</option>
+      <option value="4-1">大四上</option>
+      <option value="4-2">大四下</option>
+      <option value="general">通識/校核心課程</option>
     </select>
-    <select id="subSelect" onchange="updateCourse()"><option value="">請選擇領域</option></select>
-    <select id="courseSelect"><option value="">請選擇課程</option></select>
+    
+    <select id="mainSelect" onchange="updateCourse()">
+      <option value="">2. 請選擇類別</option>
+    </select>
+
+    <select id="courseSelect">
+      <option value="">3. 請選擇課程</option>
+    </select>
   </div>
 
-  <div class="button-group">
-    <button onclick="addCourse()" class="btn-add">加入課程</button>
-    <button onclick="addCustomCourse()" class="btn-custom">＋自由新增</button>
+  <div class="action-bar">
+    <button onclick="addCourse()" class="btn-add">加入課程清單</button>
+    <button onclick="addCustomCourse()" class="btn-custom">＋手動新增其他課</button>
   </div>
 
   <hr>
-
   <h2>📚 已修課程清單</h2>
-  <ul id="list"></ul>
+  <div id="list-container"></div>
 
   <div class="summary-dashboard">
     <div class="stat-card">
       <div class="card-title">通識課程 (目標 28)</div>
       <div class="card-main"><b id="score-gen">0</b> / 28</div>
-      <div class="card-sub" id="gen-check">尚未跨三領域</div>
+      <div id="gen-check" class="card-sub">尚未跨三領域</div>
     </div>
-    
     <div class="stat-card">
-      <div class="card-title">專業課程 (目標 80)</div>
-      <div class="card-main"><b id="score-major">0</b> / 80</div>
-      <div class="card-sub" id="major-check">含院必、系必、系選</div>
+      <div class="card-title">專業必修 (目標 58)</div>
+      <div class="card-main"><b id="score-req">0</b> / 58</div>
+      <div class="card-sub">含院必、系必</div>
     </div>
-
+    <div class="stat-card">
+      <div class="card-title">專業選修 (目標 22)</div>
+      <div class="card-main"><b id="score-ele">0</b> / 22</div>
+      <div class="card-sub">超出轉自由選修</div>
+    </div>
     <div class="stat-card">
       <div class="card-title">自由選修 (目標 20)</div>
       <div class="card-main"><b id="score-free">0</b> / 20</div>
       <div class="card-sub">外系或超額系選</div>
     </div>
-
     <div class="stat-card total">
-      <div class="card-title">畢業總學分</div>
+      <div class="card-title">畢業總學分進度</div>
       <div class="card-main"><b id="total">0</b> / 128</div>
-      <div class="card-sub" id="final-check">加油！</div>
+      <div class="card-sub">加油！不要延畢！！！</div>
     </div>
   </div>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
