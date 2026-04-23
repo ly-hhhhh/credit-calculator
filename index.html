@@ -15,17 +15,11 @@
   <div class="selector-group">
     <select id="mainSelect" onchange="updateSecond()">
       <option value="">請選擇類別</option>
-      <option value="general">通識課程</option>
-      <option value="major">專業課程</option>
+      <option value="general">通識課程 (門檻 28)</option>
+      <option value="major">專業課程 (門檻 80)</option>
     </select>
-
-    <select id="subSelect" onchange="updateCourse()">
-      <option value="">請選擇領域</option>
-    </select>
-
-    <select id="courseSelect">
-      <option value="">請選擇課程</option>
-    </select>
+    <select id="subSelect" onchange="updateCourse()"><option value="">請選擇領域</option></select>
+    <select id="courseSelect"><option value="">請選擇課程</option></select>
   </div>
 
   <div class="button-group">
@@ -38,11 +32,30 @@
   <h2>📚 已修課程清單</h2>
   <ul id="list"></ul>
 
-  <div class="summary-grid">
-    <div class="stat-item"><span>通識</span><b id="score-gen">0</b></div>
-    <div class="stat-item"><span>必修</span><b id="score-req">0</b></div>
-    <div class="stat-item"><span>選修</span><b id="score-ele">0</b></div>
-    <div class="stat-item total"><span>總分</span><b id="total">0</b></div>
+  <div class="summary-dashboard">
+    <div class="stat-card">
+      <div class="card-title">通識課程 (目標 28)</div>
+      <div class="card-main"><b id="score-gen">0</b> / 28</div>
+      <div class="card-sub" id="gen-check">尚未跨三領域</div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="card-title">專業課程 (目標 80)</div>
+      <div class="card-main"><b id="score-major">0</b> / 80</div>
+      <div class="card-sub" id="major-check">含院必、系必、系選</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="card-title">自由選修 (目標 20)</div>
+      <div class="card-main"><b id="score-free">0</b> / 20</div>
+      <div class="card-sub">外系或超額系選</div>
+    </div>
+
+    <div class="stat-card total">
+      <div class="card-title">畢業總學分</div>
+      <div class="card-main"><b id="total">0</b> / 128</div>
+      <div class="card-sub" id="final-check">加油！</div>
+    </div>
   </div>
 </div>
 
