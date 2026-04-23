@@ -1,11 +1,8 @@
-/* 引入 Google Fonts 思源宋體 (最接近京華老宋體的雲端字體) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&display=swap');
 
 body {
-  /* 中文優先使用思源宋體，英文使用系統預設 */
-  font-family: "Noto Serif TC", "Songti TC", "MS PMincho", serif;
+  font-family: "Noto Serif TC", serif;
   background: #f0f2f5;
-  color: #333;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -13,108 +10,55 @@ body {
 
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   background: white;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* 標題設定：英文字使用 Times New Roman，中文字使用宋體 */
 h1 { 
   text-align: center; 
-  color: #1a1a1a; 
   font-family: "Times New Roman", "Noto Serif TC", serif; 
   font-size: 28px;
-  font-weight: 900; /* 加粗宋體更有老字體感 */
   margin-bottom: 5px;
 }
 
-p {
-  text-align: center;
-  margin-top: 0;
-  font-size: 14px;
-  font-family: "Noto Serif TC", serif;
-}
-
-h2 {
-  font-family: "Noto Serif TC", serif;
-  font-size: 20px;
-}
-
-.selector-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 16px;
-  /* 下拉選單也套用宋體 */
-  font-family: "Noto Serif TC", serif;
-}
+.selector-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
+select { padding: 12px; border-radius: 10px; border: 1px solid #ddd; font-family: "Noto Serif TC", serif; }
 
 .button-group { display: flex; gap: 10px; }
-button { 
-  flex: 1; 
-  padding: 12px; 
-  border: none; 
-  border-radius: 10px; 
-  font-weight: bold; 
-  cursor: pointer; 
-  font-family: "Noto Serif TC", serif;
-}
-
+button { flex: 1; padding: 12px; border-radius: 10px; border: none; font-weight: bold; cursor: pointer; font-family: "Noto Serif TC", serif; }
 .btn-add { background: #4f46e5; color: white; }
 .btn-custom { background: #10b981; color: white; }
 
 ul { padding: 0; list-style: none; }
-li {
-  background: #f9fafb;
-  padding: 10px 15px;
-  margin-bottom: 8px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Noto Serif TC", serif;
-}
+li { background: #f9fafb; padding: 10px 15px; margin-bottom: 8px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+li button { background: #fee2e2; color: #ef4444; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
 
-li button { 
-  background: #fee2e2; 
-  color: #ef4444; 
-  border: none; 
-  padding: 5px 10px; 
-  border-radius: 5px; 
-  font-size: 12px; 
-  cursor: pointer; 
-}
-
-.summary-grid {
+/* 儀表板樣式 */
+.summary-dashboard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.stat-card {
   background: #f8fafc;
   padding: 15px;
   border-radius: 15px;
+  border: 1px solid #e2e8f0;
   text-align: center;
 }
 
-.stat-item span { 
-  display: block; 
-  font-size: 12px; 
-  color: #64748b; 
-  font-family: "Noto Serif TC", serif;
+.card-title { font-size: 13px; color: #64748b; margin-bottom: 5px; }
+.card-main { font-size: 20px; font-weight: bold; font-family: "Times New Roman", serif; }
+.card-sub { font-size: 12px; margin-top: 5px; color: #94a3b8; }
+
+.stat-card.total {
+  grid-column: span 2;
+  background: #4f46e5;
+  color: white;
 }
-.stat-item b { 
-  font-size: 18px; 
-  color: #1e293b; 
-  font-family: "Times New Roman", serif; /* 數字用 Times New Roman 較美觀 */
-}
-.stat-item.total b { color: #4f46e5; }
+.stat-card.total .card-title, .stat-card.total .card-sub { color: #e0e7ff; }
