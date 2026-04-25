@@ -1,49 +1,254 @@
-/* ...保留你之前的 style.css 內容，在下方追加或修改以下部分... */
+/* 引入 Google Fonts 思源宋體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap');
 
+body {
+  font-family: 'Noto Serif TC', "Songti TC", serif;
+  background-color: #f0f2f5;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 雙欄主外層 */
+.main-wrapper {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 25px;
+  padding: 30px;
+  align-items: flex-start; /* 確保右側能固定在頂部 */
+}
+
+/* 左側：操作區與明細 */
+.left-column {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 右側：固定統計區 */
+.right-column {
+  flex: 1;
+  position: sticky;
+  top: 30px; /* 捲動時會卡在上方 30px 的位置 */
+}
+
+/* 卡片通用設計 */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h1 { 
+  font-size: 1.6rem; 
+  text-align: center; 
+  margin: 0 0 10px 0; 
+  font-weight: 900;
+}
+
+h2 { 
+  font-size: 1.2rem; 
+  margin-bottom: 20px; 
+  border-left: 5px solid #6366f1; 
+  padding-left: 12px; 
+  font-weight: 700;
+}
+
+/* 副標題群組 */
+.subtitle-group {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.main-sub {
+  margin: 0;
+  font-weight: bold;
+  color: #475569;
+  font-size: 1.05rem;
+}
+.hint-sub {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* 模式切換膠囊按鈕 */
 .input-mode-toggle {
   display: flex;
-  gap: 10px;
+  background: #f1f5f9;
+  padding: 5px;
+  border-radius: 12px;
   margin-bottom: 20px;
+  gap: 5px;
 }
 
 .mode-btn {
   flex: 1;
   padding: 10px;
-  border: 1px solid #e2e8f0;
-  background: white;
+  border: none;
+  background: transparent;
+  color: #64748b;
   border-radius: 8px;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.3s;
+  font-weight: bold;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mode-btn.active {
-  background: #1e293b;
-  color: white;
-  border-color: #1e293b;
+  background: white;
+  color: #6366f1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.full-width {
+/* 輸入框與選單統一規範 */
+select, .manual-input {
   width: 100%;
-  margin: 10px 0 20px 0;
-}
-
-.manual-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1rem;
   font-family: inherit;
+  background-color: white;
   box-sizing: border-box;
 }
 
-#manual-mode-section select {
+.manual-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+/* 按鈕美化 */
+.btn-add, .btn-custom {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
   font-family: inherit;
+}
+
+.btn-add { background-color: #6366f1; }
+.btn-add:hover { background-color: #4f46e5; transform: translateY(-2px); }
+
+.btn-custom { background-color: #10b981; }
+.btn-custom:hover { background-color: #059669; transform: translateY(-2px); }
+
+/* 修課明細列表區域 */
+.list-container {
+  max-height: 550px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* 自定義捲軸樣式（選配，讓介面更精緻） */
+.list-container::-webkit-scrollbar { width: 6px; }
+.list-container::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+
+.semester-block {
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #f1f5f9;
+}
+
+.semester-title {
+  font-weight: bold;
+  color: #475569;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+ul { list-style: none; padding: 0; margin: 0; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  font-size: 0.95rem;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* 右側統計儀表板 */
+.summary-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-card {
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #eef2f6;
+}
+
+.stat-card.total {
+  background: #1e293b;
+  color: white;
+  border: none;
+  margin-top: 5px;
+}
+
+.card-title { font-size: 0.8rem; color: #64748b; margin-bottom: 5px; }
+.total .card-title { color: #94a3b8; }
+.card-main b { font-size: 1.4rem; color: #1e293b; }
+.total b { color: #818cf8; font-size: 1.8rem; }
+.card-sub { font-size: 0.75rem; margin-top: 5px; color: #94a3b8; }
+
+/* 匿名箱區塊 */
+.footer-note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 20px;
+  line-height: 1.6;
+}
+
+.footer-note a {
+  color: #6366f1;
+  text-decoration: underline;
+  margin: 0 4px;
+  font-weight: bold;
+}
+
+/* 響應式：螢幕太窄時自動切換回單欄 */
+@media (max-width: 850px) {
+  .main-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-column {
+    position: static;
+    width: 100%;
+  }
+  .left-column { width: 100%; }
 }
