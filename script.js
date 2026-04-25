@@ -111,9 +111,9 @@ function addManualCourse() {
     const creditValue = document.getElementById("manualCredit").value;
     const categoryRaw = document.getElementById("manualCategory").value;
 
-    if (!name || !creditValue) return alert("名稱或學分沒填好喔！");
+    if (!name || !creditValue) return alert("名稱或學分沒填好ㄛ！");
     const credit = parseInt(creditValue);
-    if (selected.some(s => s.n === name)) return alert("這門課已經加過了喔！");
+    if (selected.some(s => s.n === name)) return alert("加過了啦");
 
     let mainCat, subCat;
     if (categoryRaw.startsWith("gen-")) {
