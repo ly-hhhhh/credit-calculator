@@ -88,7 +88,7 @@ function updateCourse() {
         const opt = document.createElement("option");
         const info = { n: c.n, c: c.c, main: (sem === 'general' ? 'gen' : 'major_auto'), sub: cat.replace('通識-',''), sem: sem };
         opt.value = JSON.stringify(info);
-        opt.textContent = c.n; // 移除 (2學分) 的顯示
+        opt.textContent = c.n;
         courseSelect.appendChild(opt);
     });
 }
@@ -108,10 +108,11 @@ function addCourse() {
 
 function addManualCourse() {
     const name = document.getElementById("manualName").value;
-    const credit = parseInt(document.getElementById("manualCredit").value);
+    const creditValue = document.getElementById("manualCredit").value;
     const categoryRaw = document.getElementById("manualCategory").value;
 
-    if (!name || isNaN(credit)) return alert("名稱或學分沒填好喔！");
+    if (!name || !creditValue) return alert("名稱或學分沒填好喔！");
+    const credit = parseInt(creditValue);
     if (selected.some(s => s.n === name)) return alert("這門課已經加過了喔！");
 
     let mainCat, subCat;
@@ -164,7 +165,7 @@ function render() {
             courses.forEach(c => {
                 if (c.main === "gen") {
                     stats.gen += c.c;
-                    if (c.sub && !["核心", "手動新增"].includes(c.sub)) genDomains.add(c.sub);
+                    if (c.sub && !["核心", "手動新增", "校核心必修"].includes(c.sub)) genDomains.add(c.sub);
                 }
                 else if (c.main === "req") stats.req += c.c;
                 else if (c.main === "ele") eleTotal += c.c;
