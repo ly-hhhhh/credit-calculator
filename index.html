@@ -10,34 +10,54 @@
 
 <div class="container">
   <h1>✨ 請開始你的選課 ✨</h1>
-  <p class="subtitle">基於南大戲劇113課程規劃<br><br>選修課程每年會有不同變化<br>如果當學期找不到，可以去前後學期找找ㄛ！</p>
+  <p class="subtitle">
+    基於南大戲劇113課程規劃<br>
+    <small>選修課程每年不同，若當學期找不到，可至前後學期尋找ㄛ！</small>
+  </p>
 
-  <div class="selector-group">
-    <select id="semesterSelect" onchange="updateMain()">
-      <option value="">1. 請選擇學期</option>
-      <option value="1-1">大一上</option>
-      <option value="1-2">大一下</option>
-      <option value="2-1">大二上</option>
-      <option value="2-2">大二下</option>
-      <option value="3-1">大三上</option>
-      <option value="3-2">大三下</option>
-      <option value="4-1">大四上</option>
-      <option value="4-2">大四下</option>
-      <option value="general">通識/校核心課程</option>
-    </select>
-    
-    <select id="mainSelect" onchange="updateCourse()">
-      <option value="">2. 請選擇類別</option>
-    </select>
-
-    <select id="courseSelect">
-      <option value="">3. 請選擇課程</option>
-    </select>
+  <div class="input-mode-toggle">
+    <button onclick="toggleMode('list')" id="btn-mode-list" class="mode-btn active">從清單點選</button>
+    <button onclick="toggleMode('manual')" id="btn-mode-manual" class="mode-btn">手動輸入</button>
   </div>
 
-  <div class="action-bar">
-    <button onclick="addCourse()" class="btn-add">加入課程清單</button>
-    <button onclick="addCustomCourse()" class="btn-custom">＋手動新增其他課</button>
+  <div id="list-mode-section">
+    <div class="selector-group">
+      <select id="semesterSelect" onchange="updateMain()">
+        <option value="">1. 請選擇學期</option>
+        <option value="1-1">大一上</option>
+        <option value="1-2">大一下</option>
+        <option value="2-1">大二上</option>
+        <option value="2-2">大二下</option>
+        <option value="3-1">大三上</option>
+        <option value="3-2">大三下</option>
+        <option value="4-1">大四上</option>
+        <option value="4-2">大四下</option>
+        <option value="general">通識/校核心課程</option>
+      </select>
+      
+      <select id="mainSelect" onchange="updateCourse()">
+        <option value="">2. 請選擇類別</option>
+      </select>
+
+      <select id="courseSelect">
+        <option value="">3. 請選擇課程</option>
+      </select>
+    </div>
+    <button onclick="addCourse()" class="btn-add full-width">加入課程清單</button>
+  </div>
+
+  <div id="manual-mode-section" style="display: none;">
+    <div class="selector-group">
+      <input type="text" id="manualName" placeholder="請輸入課程名稱" class="manual-input">
+      <input type="number" id="manualCredit" placeholder="學分" class="manual-input" min="0">
+      <select id="manualCategory">
+        <option value="gen">通識/校核心</option>
+        <option value="req">專業必修</option>
+        <option value="ele">專業選修</option>
+        <option value="free">自由選修</option>
+      </select>
+    </div>
+    <button onclick="addManualCourse()" class="btn-custom full-width">確認新增課程</button>
   </div>
 
   <hr>
@@ -73,7 +93,8 @@
   </div>
 
   <footer class="footer-note">
-    有任何建議指教，歡迎到<a href="https://tellonym.me/ddca.cc/anything" target="_blank">匿名箱</a>留言<br>我們不一定會聽 😻
+    有任何建議指教，歡迎到<a href="https://tellonym.me/ddca.cc/anything" target="_blank">匿名箱</a>留言<br>
+    我們不一定會聽 😻
   </footer>
 </div>
 
