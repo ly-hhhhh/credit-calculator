@@ -33,15 +33,35 @@ const courseDB = {
   },
   "general": {
     "校核心必修": [{n:"體育",c:2},{n:"英文（一）",c:2},{n:"英文（二）",c:2},{n:"中文閱讀與書寫（一）",c:2},{n:"中文閱讀與書寫（二）",c:2}],
-    "通識-文史哲藝術": [ {n:"休閒地理",c:2}, {n:"攝影藝術",c:2}, {n:"旅遊英文",c:2}, {n:"歌唱治療",c:2}, {n:"職場英文",c:2}, {n:"時事英文",c:2}, {n:"空間美學",c:2}, {n:"創意臺南",c:2}, {n:"療癒書法",c:2}, {n:"科幻文學",c:2}, {n:"美國文化",c:2}, {n:"法國文化",c:2}, {n:"法國文化",c:2}, {n:"美感與生活",c:2}, {n:"民俗與藝術",c:2}, {n:"禪學與人生",c:2}, {n:"舞蹈與藝術",c:2}, {n:"音樂與人生",c:2}, {n:"影像藝術思維",c:2}, {n:"經典文學導讀",c:2}, {n:"文學中的臺南",c:2}, {n:"表演藝術欣賞",c:2}, {n:"實用情境日文",c:2}, {n:"實用情境法文",c:2}, {n:"實用情境德文",c:2}, {n:"實用情境美語",c:2}, {n:"實用情境韓文",c:2}, {n:"文學與現代生活",c:2}, {n:"英文小品文賞析",c:2}, {n:"兒童文學與閱讀",c:2}, {n:"小說與社會關懷",c:2}, {n:"臺灣原住民文學",c:2}, {n:"臺灣歷史與文化",c:2}, {n:"鯤島的海洋戀歌",c:2}, {n:"臺灣女性散文選讀",c:2}, {n:"臺灣經典文獻選讀",c:2}, {n:"博物館導覽與應用",c:2}, {n:"旅遊史與經典選讀",c:2}, {n:"歐美史學名著選讀",c:2}, {n:"英語口語表達技巧",c:2}, {n:"英語口語表達技巧",c:2}, {n:"從近代史看東亞思維",c:2}, {n:"沿著海走的藝文教育",c:2}, {n:"海味人生的藝文創作",c:2}, {n:"日治期的臺日經典文學",c:2}, {n:"14～17世紀歐洲文明史",c:2} ],
-    "通識-社會脈動": [ {n:"法律素養",c:2}, {n:"親子關係",c:2}, {n:"理財規劃",c:2}, {n:"領導藝術",c:2}, {n:"國際禮儀",c:2}, {n:"性別與社會",c:2}, {n:"性別與教育",c:2}, {n:"婚姻與家庭",c:2}, {n:"環境與經濟",c:2}, {n:"愛情與法律",c:2}, {n:"職場與法律",c:2}, {n:"管理學概論",c:2}, {n:"政治學概論",c:2}, {n:"電影中的法律",c:2}, {n:"財務管理概論",c:2}, {n:"行銷管理概論",c:2}, {n:"全球產業分析",c:2}, {n:"人際關係與發展",c:2}, {n:"實用法律與思辯",c:2}, {n:"在地文創與社區",c:2}, {n:"證券投資與管理",c:2}, {n:"犯罪、法律與人權",C:2}, {n:"人力資源管理概論",c:2}, {n:"全球化與公民素養",c:2}, {n:"服務學習與社會關懷",c:2}, {n:"性別演化與性別衝突",c:2}, {n:"生產與作業管理概論",c:2}, {n:"世界經濟趨勢與發展",c:2}, {n:"國際關係發展與理論",c:2}, {n:"臺灣原住民族文化概論",c:2}, {n:"全球化與兩岸經貿關係",c:2}, {n:"臺灣主權地位的國際觀",c:2}, {n:"中國國家戰略發展趨勢",c:2}, {n:"財經時事分析與投資實務",C:2}, {n:"當代國際組織類型與功能",c:2}, {n:"國際體系變遷與臺灣安全",c:2}, {n:"金融創新-指數化投資（ETF）",c:2}, {n:"南海爭端國家國防發展與區域安全",c:2}, {n:"全民國防教育軍事訓練課程（一）國際情勢",c:2}, {n:"全民國防教育軍事訓練課程（二）國防政策",c:2}, {n:"全民國防教育軍事訓練課程（三）全民國防",c:2}, {n:"全民國防教育軍事訓練課程（四）防衛動員",c:2} ],
-    "通識-生命科學": [ {n:"生死學",C:2}, {n:"生命教育",c:2}, {n:"競技飛盤",c:2}, {n:"防身太極",c:2}, {n:"認識病毒",c:2}, {n:"環境與生態",c:2}, {n:"科學文明史",c:2}, {n:"運動與人生",c:2}, {n:"植物與人生",c:2}, {n:"生態與文明",c:2}, {n:"醫學與保健",c:2}, {n:"直排輪入門",c:2}, {n:"身心適能探索",c:2}, {n:"國家公園概論",c:2}, {n:"環境教育概論",c:2}, {n:"微生物與生活",c:2}, {n:"樂活人生規劃",c:2}, {n:"運動知能與欣賞",c:2}, {n:"信仰與生命成長",c:2}, {n:"鳥類生態與保育",c:2}, {n:"生態旅遊與保育",c:2}, {n:"運動與體重控制",c:2}, {n:"癌症預防與生活",c:2}, {n:"環境汙染與健康",c:2}, {n:"疾病徵兆及認識",c:2}, {n:"大學生的幸福學",c:2}, {n:"生命實踐的對話",C:2}, {n:"遺傳學與人類生活",c:2}, {n:"臺灣自然保育議題",c:2}, {n:"水資源利用與保育",c:2}, {n:"ESG與永續生活設計",c:2}, {n:"日常生活的社會心理學",c:2}, {n:"海洋人文社會科學導論",c:2}, {n:"尋找安平追想曲中的海洋",c:2} ],
+    "通識-文史哲藝術": [ {n:"休閒地理",c:2}, {n:"攝影藝術",c:2}, {n:"旅遊英文",c:2}, {n:"歌唱治療",c:2}, {n:"職場英文",c:2}, {n:"時事英文",c:2}, {n:"空間美學",c:2}, {n:"創意臺南",c:2}, {n:"療癒書法",c:2}, {n:"科幻文學",c:2}, {n:"美國文化",c:2}, {n:"法國文化",c:2}, {n:"美感與生活",c:2}, {n:"民俗與藝術",c:2}, {n:"禪學與人生",c:2}, {n:"舞蹈與藝術",c:2}, {n:"音樂與人生",c:2}, {n:"影像藝術思維",c:2}, {n:"經典文學導讀",c:2}, {n:"文學中的臺南",c:2}, {n:"表演藝術欣賞",c:2}, {n:"實用情境日文",c:2}, {n:"實用情境法文",c:2}, {n:"實用情境德文",c:2}, {n:"實用情境美語",c:2}, {n:"實用情境韓文",c:2}, {n:"文學與現代生活",c:2}, {n:"英文小品文賞析",c:2}, {n:"兒童文學與閱讀",c:2}, {n:"小說與社會關懷",c:2}, {n:"臺灣原住民文學",c:2}, {n:"臺灣歷史與文化",c:2}, {n:"鯤島的海洋戀歌",c:2}, {n:"臺灣女性散文選讀",c:2}, {n:"臺灣經典文獻選讀",c:2}, {n:"博物館導覽與應用",c:2}, {n:"旅遊史與經典選讀",c:2}, {n:"歐美史學名著選讀",c:2}, {n:"英語口語表達技巧",c:2}, {n:"從近代史看東亞思維",c:2}, {n:"沿著海走的藝文教育",c:2}, {n:"海味人生的藝文創作",c:2}, {n:"日治期的臺日經典文學",c:2}, {n:"14～17世紀歐洲文明史",c:2} ],
+    "通識-社會脈動": [ {n:"法律素養",c:2}, {n:"親子關係",c:2}, {n:"理財規劃",c:2}, {n:"領導藝術",c:2}, {n:"國際禮儀",c:2}, {n:"性別與社會",c:2}, {n:"性別與教育",c:2}, {n:"婚姻與家庭",c:2}, {n:"環境與經濟",c:2}, {n:"愛情與法律",c:2}, {n:"職場與法律",c:2}, {n:"管理學概論",c:2}, {n:"政治學概論",c:2}, {n:"電影中的法律",c:2}, {n:"財務管理概論",c:2}, {n:"行銷管理概論",c:2}, {n:"全球產業分析",c:2}, {n:"人際關係與發展",c:2}, {n:"實用法律與思辯",c:2}, {n:"在地文創與社區",c:2}, {n:"證券投資與管理",c:2}, {n:"犯罪、法律與人權",c:2}, {n:"人力資源管理概論",c:2}, {n:"全球化與公民素養",c:2}, {n:"服務學習與社會關懷",c:2}, {n:"性別演化與性別衝突",c:2}, {n:"生產與作業管理概論",c:2}, {n:"世界經濟趨勢與發展",c:2}, {n:"國際關係發展與理論",c:2}, {n:"臺灣原住民族文化概論",c:2}, {n:"全球化與兩岸經貿關係",c:2}, {n:"臺灣主權地位的國際觀",c:2}, {n:"中國國家戰略發展趨勢",c:2}, {n:"財經時事分析與投資實務",c:2}, {n:"當代國際組織類型與功能",c:2}, {n:"國際體系變遷與臺灣安全",c:2}, {n:"金融創新-指數化投資（ETF）",c:2}, {n:"南海爭端國家國防發展與區域安全",c:2}, {n:"全民國防教育軍事訓練課程（一）國際情勢",c:2}, {n:"全民國防教育軍事訓練課程（二）國防政策",c:2}, {n:"全民國防教育軍事訓練課程（三）全民國防",c:2}, {n:"全民國防教育軍事訓練課程（四）防衛動員",c:2} ],
+    "通識-生命科學": [ {n:"生死學",c:2}, {n:"生命教育",c:2}, {n:"競技飛盤",c:2}, {n:"防身太極",c:2}, {n:"認識病毒",c:2}, {n:"環境與生態",c:2}, {n:"科學文明史",c:2}, {n:"運動與人生",c:2}, {n:"植物與人生",c:2}, {n:"生態與文明",c:2}, {n:"醫學與保健",c:2}, {n:"直排輪入門",c:2}, {n:"身心適能探索",c:2}, {n:"國家公園概論",c:2}, {n:"環境教育概論",c:2}, {n:"微生物與生活",c:2}, {n:"樂活人生規劃",c:2}, {n:"運動知能與欣賞",c:2}, {n:"信仰與生命成長",c:2}, {n:"鳥類生態與保育",c:2}, {n:"生態旅遊與保育",c:2}, {n:"運動與體重控制",c:2}, {n:"癌症預防與生活",c:2}, {n:"環境汙染與健康",c:2}, {n:"疾病徵兆及認識",c:2}, {n:"大學生的幸福學",c:2}, {n:"生命實踐的對話",c:2}, {n:"遺傳學與人類生活",c:2}, {n:"臺灣自然保育議題",c:2}, {n:"水資源利用與保育",c:2}, {n:"ESG與永續生活設計",c:2}, {n:"日常生活的社會心理學",c:2}, {n:"海洋人文社會科學導論",c:2}, {n:"尋找安平追想曲中的海洋",c:2} ],
     "通識-科技探索": [ {n:"節能減碳",c:2}, {n:"創意思考",c:2}, {n:"科技與管理",c:2}, {n:"氣象與生活",c:2}, {n:"數學與生活",c:2}, {n:"風能與環境",c:2}, {n:"太陽能初探",c:2}, {n:"物聯網應用",c:2}, {n:"遊戲化思考",c:2}, {n:"綠能與電動車",c:2}, {n:"人工智慧導論",c:2}, {n:"機器學習概論",c:2}, {n:"生物科技的應用",c:2}, {n:"意識哲學與科學",c:2}, {n:"能源科技與生活",c:2}, {n:"儲能科技與生活",c:2}, {n:"創意與創新概論",c:2}, {n:"大數據分析概論",c:2}, {n:"生成式AI之運用",c:2}, {n:"行動裝置程式設計",c:2}, {n:"機器人思維與設計",c:2}, {n:"雲端網路資源應用",c:2}, {n:"AI人文藝術之應用",c:2}, {n:"科技創新與知識管理",c:2}, {n:"智慧財產權法律實務",c:2}, {n:"SDGs與遊戲化設計",c:2}, {n:"網路資料探勘與分析",c:2}, {n:"股市預測與機器學習",c:2}, {n:"商業大數據思維與應用",c:2}, {n:"金融大數據思維與應用",c:2}, {n:"教育大數據思維與應用",c:2}, {n:"AI影像辨識導論與實務",c:2}, {n:"網頁設計與網站建置概論",c:2}, {n:"計算機概論與Python程式設計",c:2}, {n:"全民國防教育軍事訓練課程（五）國防科技",c:2} ]
   }
 };
 
 let selected = [];
 window.onload = function () { load(); render(); };
+
+// 切換點選/手動模式
+function toggleMode(mode) {
+  const listSection = document.getElementById('list-mode-section');
+  const manualSection = document.getElementById('manual-mode-section');
+  const btnList = document.getElementById('btn-mode-list');
+  const btnManual = document.getElementById('btn-mode-manual');
+
+  if (mode === 'list') {
+    listSection.style.display = 'block';
+    manualSection.style.display = 'none';
+    btnList.classList.add('active');
+    btnManual.classList.remove('active');
+  } else {
+    listSection.style.display = 'none';
+    manualSection.style.display = 'block';
+    btnList.classList.remove('active');
+    btnManual.classList.add('active');
+  }
+}
 
 function updateMain() {
   const sem = document.getElementById("semesterSelect").value;
@@ -80,11 +100,25 @@ function addCourse() {
   save(); render();
 }
 
-function addCustomCourse() {
-  const n = prompt("課程名稱："); if(!n) return;
-  const c = parseInt(prompt("學分：", "2"));
-  const sem = document.getElementById("semesterSelect").value || "1-1";
-  selected.push({ n, c, main: "free", sub: "自定義", sem: sem, id: Date.now() });
+function addManualCourse() {
+  const name = document.getElementById("manualName").value;
+  const credit = parseInt(document.getElementById("manualCredit").value);
+  const category = document.getElementById("manualCategory").value;
+
+  if (!name || isNaN(credit)) return alert("請填寫完整的課程名稱與學分");
+
+  selected.push({
+    n: name,
+    c: credit,
+    main: category, 
+    sub: "手動輸入",
+    sem: "手動輸入",
+    id: Date.now()
+  });
+
+  document.getElementById("manualName").value = "";
+  document.getElementById("manualCredit").value = "";
+  
   save(); render();
 }
 
@@ -100,29 +134,29 @@ function render() {
   let genDomains = new Set();
   let eleOverflow = 0;
 
-  const semNames = {"1-1":"大一上","1-2":"大一下","2-1":"大二上","2-2":"大二下","3-1":"大三上","3-2":"大三下","4-1":"大四上","4-2":"大四下","general":"通識/校核心"};
+  const semNames = {"1-1":"大一上","1-2":"大一下","2-1":"大二上","2-2":"大二下","3-1":"大三上","3-2":"大三下","4-1":"大四上","4-2":"大四下","general":"通識/校核心","手動輸入":"手動輸入課程"};
 
   Object.keys(semNames).forEach(semKey => {
     const semCourses = selected.filter(c => c.sem === semKey);
     if (semCourses.length > 0) {
       const block = document.createElement("div");
       block.className = "semester-block";
-      block.innerHTML = `<div class="semester-title">${semNames[semKey]}</div><ul id="ul-${semKey}"></ul>`;
+      const ulId = `ul-${semKey.replace(/-/g, '')}`;
+      block.innerHTML = `<div class="semester-title">${semNames[semKey]}</div><ul id="${ulId}"></ul>`;
       container.appendChild(block);
       
       semCourses.forEach(c => {
-        if (c.main === "gen") {
-          stats.gen += c.c;
-          if (c.sub.includes("通識")) genDomains.add(c.sub);
-        } else if (c.main === "major") {
-          if (c.sub === "專業必修") stats.req += c.c;
-          else eleOverflow += c.c;
-        } else {
-          stats.free += c.c;
-        }
+        // 統計邏輯
+        if (c.main === "gen") stats.gen += c.c;
+        else if (c.main === "req") stats.req += c.c;
+        else if (c.main === "ele") eleOverflow += c.c;
+        else stats.free += c.c;
+
+        if (c.sub && c.sub.includes("通識")) genDomains.add(c.sub);
+
         const li = document.createElement("li");
         li.innerHTML = `<span>${c.n} <small style="color:#888">(${c.c})</small></span><button class="delete-btn" onclick="remove(${c.id})">刪除</button>`;
-        document.getElementById(`ul-${semKey}`).appendChild(li);
+        document.getElementById(ulId).appendChild(li);
       });
     }
   });
