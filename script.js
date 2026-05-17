@@ -88,7 +88,7 @@ function updateCourse() {
         const opt = document.createElement("option");
         const info = { n: c.n, c: c.c, main: (sem === 'general' ? 'gen' : 'major_auto'), sub: cat.replace('通識-',''), sem: sem };
         opt.value = JSON.stringify(info);
-        opt.textContent = c.n;
+        opt.textContent = c.n; // 這裡保持乾淨純課程名稱
         courseSelect.appendChild(opt);
     });
 }
@@ -172,7 +172,8 @@ function render() {
                 else stats.free += c.c;
 
                 const li = document.createElement("li");
-                li.innerHTML = `<span>${c.n} <small style="color: #a39b90; font-size: 0.75rem; margin-left: 5px;">${c.c}學分</small></span><button class="delete-btn" onclick="remove(${c.id})">刪除</button>`;
+                // ✨ 修正這裡：拿掉原本寫死的 (2)，只靠小字呈現學分
+                li.innerHTML = `<span>${c.n}<small style="color: #a39b90; font-size: 0.75rem; margin-left: 8px;">${c.c}學分</small></span><button class="delete-btn" onclick="remove(${c.id})">刪除</button>`;
                 document.getElementById(ulId).appendChild(li);
             });
         }
