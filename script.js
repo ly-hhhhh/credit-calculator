@@ -172,7 +172,7 @@ function render() {
                 else stats.free += c.c;
 
                 const li = document.createElement("li");
-                li.innerHTML = `<span>${c.n} (${c.c})</span><button class="delete-btn" onclick="remove(${c.id})">刪除</button>`;
+                li.innerHTML = `<span>${c.n} <small style="color: #a39b90; font-size: 0.75rem; margin-left: 5px;">${c.c}學分</small></span><button class="delete-btn" onclick="remove(${c.id})">刪除</button>`;
                 document.getElementById(ulId).appendChild(li);
             });
         }
